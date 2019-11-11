@@ -27,3 +27,10 @@ Route::get('/rating', function () {
 Auth::routes(['verify'=>true]);
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::resource('booking/foods','FoodsController');
+Route::resource('booking/items','ItemsController');
+
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
