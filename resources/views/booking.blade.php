@@ -24,7 +24,7 @@
 
 <body>
 
-   <h2>Please Select Your Booking Type:</h2>
+   <h2>Please Choose Your Booking Type:</h2>
 
  <div class="row">
    <div class="column">
