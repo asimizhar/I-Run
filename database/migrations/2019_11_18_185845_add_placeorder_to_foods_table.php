@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class AddDeliverydatetimeToFoodsTable extends Migration
+class AddPlaceorderToFoodsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -14,7 +14,7 @@ class AddDeliverydatetimeToFoodsTable extends Migration
     public function up()
     {
         Schema::table('foods', function (Blueprint $table) {
-            $table->string('deliverydatetime')->default(0);
+            $table->string('placeorder')->default(0);
         });
     }
 
@@ -26,7 +26,7 @@ class AddDeliverydatetimeToFoodsTable extends Migration
     public function down()
     {
         Schema::table('foods', function (Blueprint $table) {
-            $table->dropColumn('deliverydatetime');
+            $table->dropColumn('placeorder');
         });
     }
 }

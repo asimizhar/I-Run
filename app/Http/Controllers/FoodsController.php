@@ -44,11 +44,18 @@ class FoodsController extends Controller
     {
         request()->validate([
             'name' => 'required',
-            'price' => 'required'
+            'price' => 'required',
+            'placeorder'=>'required',
+            'deliverydatetime'=>'required',
+            'placedeliver'=>'required',
+
         ]);
         $newFood = new Food;
         $newFood->name = request()->input('name');
         $newFood->price = request()->input('price');
+        $newFood->placeorder = request()->input('placeorder');
+        $newFood->deliverydatetime = request()->input('deliverydatetime');
+        $newFood->placedeliver = request()->input('placedeliver');
         $newFood->save();
         //$food->create(request(['name']));
         return redirect('booking/foods');

@@ -40,12 +40,40 @@
                         </div>
 
                         <div class="form-group row">
-                            <label for="type" class="col-md-4 col-form-label text-md-right">Date & Time</label>
+                            <label for="placeorder" class="col-md-4 col-form-label text-md-right">Restaurant/Cafe Name</label>
+                         
+                            <div class="col-md-6">
+                                <input id="placeorder" type="text" class="form-control @error('price') is-invalid @enderror" name="placeorder" value="{{ old('placeorder') }}" autocomplete="placeorder" autofocus>
+                         
+                                @error('placeorder')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="deliverydatetime" class="col-md-4 col-form-label text-md-right">Delivery Date & Time</label>
                          
                             <div class="col-md-6">
                                 <input id="deliverydatetime" type="datetime-local" class="form-control @error('type') is-invalid @enderror" name="deliverydatetime" value="{{ old('deliverydatetime') }}" autocomplete="deliverydatetime" autofocus>
                          
                                 @error('name')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="placedeliver" class="col-md-4 col-form-label text-md-right">Place To Receive Order</label>
+                         
+                            <div class="col-md-6">
+                                <input id="placedeliver" type="text" class="form-control @error('price') is-invalid @enderror" name="placedeliver" value="{{ old('placedeliver') }}" autocomplete="placedeliver" autofocus>
+                         
+                                @error('placedeliver')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
