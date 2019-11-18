@@ -6,10 +6,10 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">Item Name</div>
+                <div class="card-header">Customer Name</div>
                 <div class="card-body">
                     <div class="form-group row">
-                        <label for="item" class="col-md-4 col-form-label text-md-right">Item Name</label>
+                        <label for="item" class="col-md-4 col-form-label text-md-right">Customer Name</label>
                         
                         <div class="col-md-6">
                             <input disabled id="item" type="text" class="form-control @error('item') is-invalid @enderror" name="item" value="{{$item->item}}" autocomplete="item" autofocus>

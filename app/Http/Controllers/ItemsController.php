@@ -44,10 +44,18 @@ class ItemsController extends Controller
     {
         request()->validate([
             'item' => 'required',
+            'referenceno' => 'required',
+            'pickup' => 'required',
+            'delivertime'=>'required',
+            'deliverto'=>'required',
             // 'price' => 'required'
         ]);
         $newItem = new Item;
         $newItem->item = request()->input('item');
+        $newItem->referenceno = request()->input('referenceno');
+        $newItem->pickup = request()->input('pickup');
+        $newItem->delivertime = request()->input('delivertime');
+        $newItem->deliverto = request()->input('deliverto');
         // $newItem->price = request()->input('price');
         $newItem->save();
         //$food->create(request(['name']));
