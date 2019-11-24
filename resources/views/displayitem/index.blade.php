@@ -6,7 +6,7 @@
  <br/>
  <h3 allign="center">Item Order</h3>
  <br/>
- <table class="table table-bordered">
+ <table class="table table-bordered sortable">
    <tr>
        <th>Customer Name</th>
        <th>Reference no</th>
