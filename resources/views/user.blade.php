@@ -3,6 +3,7 @@
 
 <style>
 .column {
+  background-color: white;
   float: left;
   border: 1px solid #ddd;
   border-radius: 50px  50px  50px 50px;

@@ -5,9 +5,12 @@
 
 <style>
 .column {
+  background-color: white;
   float: left;
-  width: 40%;
+  border: 1px solid #ddd;
+  border-radius: 50px  50px  50px 50px;
   padding: 10px 10px 10px 100px;
+  width:50%;
 }
 
 .row::after {
