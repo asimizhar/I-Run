@@ -29,6 +29,10 @@ Auth::routes(['verify'=>true]);
 Route::get('/home', 'HomeController@index')->name('home');
 Route::resource('booking/foods','FoodsController');
 Route::resource('booking/items','ItemsController');
+Route::resource('user/displayfood','DisplayFoodController');
+Route::resource('user/displayitem','DisplayItemController');
+
+
 
 
 Auth::routes();

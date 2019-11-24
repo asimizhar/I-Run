@@ -5,13 +5,13 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">List of Customer</div>
+                <div class="card-header">Parcel Tracking Number</div>
                 <div class="card-body">
                     <ul>
                         @foreach ($items as $item)
                             <li>
                                 <a href="items/{{$item->id}}">
-                                    {{$item->item}}
+                                    {{$item->referenceno}}
                                 </a>
                             </li>
                         @endforeach

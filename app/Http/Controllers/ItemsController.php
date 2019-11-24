@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Auth;
 use App\Item;
 use Illuminate\Http\Request;
 
@@ -20,7 +21,7 @@ class ItemsController extends Controller
     
     public function index()
     {
-        $items = Item::all()->sortBy('item');
+        $items = Item::all()->where('userid',Auth::user()->id);
         return view('items.index', compact('items'));
     }
 
@@ -43,7 +44,6 @@ class ItemsController extends Controller
     public function store(Request $request)
     {
         request()->validate([
-            'item' => 'required',
             'referenceno' => 'required',
             'pickup' => 'required',
             'delivertime'=>'required',
@@ -51,11 +51,11 @@ class ItemsController extends Controller
             // 'price' => 'required'
         ]);
         $newItem = new Item;
-        $newItem->item = request()->input('item');
         $newItem->referenceno = request()->input('referenceno');
         $newItem->pickup = request()->input('pickup');
         $newItem->delivertime = request()->input('delivertime');
         $newItem->deliverto = request()->input('deliverto');
+        $newItem->userid =Auth::user()->id;
         // $newItem->price = request()->input('price');
         $newItem->save();
         //$food->create(request(['name']));

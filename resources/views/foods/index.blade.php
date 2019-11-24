@@ -11,7 +11,7 @@
                         @foreach ($foods as $food)
                             <li>
                                 <a href="foods/{{$food->id}}">
-                                    {{$food->name}}
+                                    {{$food->foodname}}
                                 </a>
                             </li>
                         @endforeach

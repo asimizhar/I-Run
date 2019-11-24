@@ -13,10 +13,10 @@
                         @csrf
 
                         <div class="form-group row">
-                            <label for="item" class="col-md-4 col-form-label text-md-right">Item Name</label>
+                            <label for="referenceno" class="col-md-4 col-form-label text-md-right">Item Reference Number</label>
                          
                             <div class="col-md-6">
-                                <input id="name" type="text" class="form-control @error('item') is-invalid @enderror" name="item" value="{{$item->type}}" autocomplete="item" autofocus>
+                                <input id="referenceno" type="text" class="form-control @error('referenceno') is-invalid @enderror" name="referenceno" value="{{$item->type}}" autocomplete="referenceno" autofocus>
                          
                                 @error('item')
                                     <span class="invalid-feedback" role="alert">

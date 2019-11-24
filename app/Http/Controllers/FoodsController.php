@@ -2,11 +2,13 @@
 
 namespace App\Http\Controllers;
 
+use Auth;
 use App\Food;
 use Illuminate\Http\Request;
 
 class FoodsController extends Controller
 {
+    
     /**
      * Display a listing of the resource.
      *
@@ -19,7 +21,7 @@ class FoodsController extends Controller
 
     public function index()
     {
-        $foods = Food::all()->sortBy('name');
+        $foods = Food::all()->where('userid',Auth::user()->id);
         return view('foods.index', compact('foods'));
 
     }
@@ -43,7 +45,7 @@ class FoodsController extends Controller
     public function store(Food $food)
     {
         request()->validate([
-            'name' => 'required',
+            'foodname' => 'required',
             'price' => 'required',
             'placeorder'=>'required',
             'deliverydatetime'=>'required',
@@ -51,11 +53,12 @@ class FoodsController extends Controller
 
         ]);
         $newFood = new Food;
-        $newFood->name = request()->input('name');
+        $newFood->foodname = request()->input('foodname');
         $newFood->price = request()->input('price');
         $newFood->placeorder = request()->input('placeorder');
         $newFood->deliverydatetime = request()->input('deliverydatetime');
         $newFood->placedeliver = request()->input('placedeliver');
+        $newFood->userid =Auth::user()->id;
         $newFood->save();
         //$food->create(request(['name']));
         return redirect('booking/foods');
@@ -95,7 +98,7 @@ class FoodsController extends Controller
      */
     public function update(Request $request, Food $food)
     {
-        $food->update(request(['name']));
+        $food->update(request(['foodname']));
         return redirect('booking/foods');
 
     }

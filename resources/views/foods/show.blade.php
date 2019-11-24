@@ -12,8 +12,8 @@
                         <label for="name" class="col-md-4 col-form-label text-md-right">Food Name</label>
                         
                         <div class="col-md-6">
-                            <input disabled id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{$food->name}}" autocomplete="name" autofocus>
-                            @error('name')
+                            <input disabled id="foodname" type="text" class="form-control @error('name') is-invalid @enderror" name="foodname" value="{{$food->foodname}}" autocomplete="foodname" autofocus>
+                            @error('foodname')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>
                                 </span>

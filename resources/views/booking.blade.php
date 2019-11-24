@@ -1,11 +1,12 @@
-<!DOCTYPE html>
+@extends('layouts.app')
 
-<html>
+
+
 
 <style>
 .column {
   float: left;
-  width: 33.33%;
+  width: 40%;
   padding: 10px 10px 10px 100px;
 }
 
@@ -16,13 +17,8 @@
 }
 </style>
 
-<head>
-         <title>Booking</title>
 
-</head>
-
-
-<body>
+@section('content')
 
    <h2>Please Choose Your Booking Type:</h2>
 
@@ -40,9 +36,10 @@
    <p style="text-align:center;"><a href="booking/items" style="text-decoration:none;" > Booking for items</a><p>
    </div>
  </div>
+ @endsection
 
    
 
-<body>
 
-</html>
+
+

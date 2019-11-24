@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateItemDeliver extends Migration
+class AddUseridToItemsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,8 @@ class CreateItemDeliver extends Migration
      */
     public function up()
     {
-        Schema::create('item_deliver', function (Blueprint $table) {
-            $table->bigIncrements('id');
-            $table->timestamps();
+        Schema::table('items', function (Blueprint $table) {
+            $table->integer('userid')->default(0);
         });
     }
 
@@ -26,6 +25,8 @@ class CreateItemDeliver extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('item_deliver');
+        Schema::table('items', function (Blueprint $table) {
+            $table->dropColumn('userid');
+        });
     }
 }

@@ -6,13 +6,13 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">Customer Name</div>
+                <div class="card-header">Item Reference Number</div>
                 <div class="card-body">
                     <div class="form-group row">
-                        <label for="item" class="col-md-4 col-form-label text-md-right">Customer Name</label>
+                        <label for="referenceno" class="col-md-4 col-form-label text-md-right">Item Reference Number</label>
                         
                         <div class="col-md-6">
-                            <input disabled id="item" type="text" class="form-control @error('item') is-invalid @enderror" name="item" value="{{$item->item}}" autocomplete="item" autofocus>
+                            <input disabled id="referenceno" type="text" class="form-control @error('referenceno') is-invalid @enderror" name="referenceno" value="{{$item->referenceno}}" autocomplete="referenceno" autofocus>
                             @error('name')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>

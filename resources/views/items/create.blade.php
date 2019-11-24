@@ -12,20 +12,6 @@
                         @csrf
 
                         <div class="form-group row">
-                            <label for="type" class="col-md-4 col-form-label text-md-right">Parcel Owner Name</label>
-                         
-                            <div class="col-md-6">
-                                <input id="item" type="text" class="form-control @error('type') is-invalid @enderror" name="item" value="{{ old('item') }}" autocomplete="item" autofocus>
-                         
-                                @error('item')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                            </div>
-                        </div>
-
-                        <div class="form-group row">
                             <label for="referenceno" class="col-md-4 col-form-label text-md-right">Reference No.</label>
                          
                             <div class="col-md-6">
@@ -40,7 +26,7 @@
                         </div>
 
                         <div class="form-group row">
-                            <label for="pickup" class="col-md-4 col-form-label text-md-right">Pick-Up From</label>
+                            <label for="pickup" class="col-md-4 col-form-label text-md-right">Pick-Up Item From</label>
                          
                             <div class="col-md-6">
                                 <input id="pickup" type="text" class="form-control @error('pickup') is-invalid @enderror" name="pickup" value="{{ old('pickup') }}" autocomplete="pickup" autofocus>

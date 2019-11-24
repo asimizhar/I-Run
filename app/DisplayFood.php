@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Food extends Model  
+class DisplayFood extends Model
 {
-    protected $fillable = ['foodname'];
+    protected $table = ['foods'];
 }

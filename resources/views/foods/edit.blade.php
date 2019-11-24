@@ -13,12 +13,12 @@
                         @csrf
 
                         <div class="form-group row">
-                            <label for="name" class="col-md-4 col-form-label text-md-right">Food Name</label>
+                            <label for="foodname" class="col-md-4 col-form-label text-md-right">Food Name</label>
                          
                             <div class="col-md-6">
-                                <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{$food->type}}" autocomplete="name" autofocus>
+                                <input id="foodname" type="text" class="form-control @error('foodname') is-invalid @enderror" name="foodname" value="{{$food->type}}" autocomplete="foodname" autofocus>
                          
-                                @error('name')
+                                @error('foodname')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>

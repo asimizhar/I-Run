@@ -1,14 +1,4 @@
-<!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-
-        <title>I-RUN</title>
-
-        <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
-
+@extends('layouts.app')
         <!-- Styles -->
         <style>
             html, body {
@@ -79,13 +69,11 @@
                 margin-bottom: 30px;
             }
         </style>
-    </head>
-    <body>
+@section('content')
         <div class=" flex-right full-height">
             @if (Route::has('login'))
                 <div class="top-right links">
                     @auth
-                        <a href="{{ url('/home') }}">Home</a>
                     @else
                         <a href="{{ route('login') }}">Login</a>
 
@@ -97,12 +85,8 @@
             @endif
 
             <div class="content">
-                <div class="title m-b-md">
-                    I-RUN
-                </div>
-
                 <div class="link">
-                    <a href="/">Dashboard</a>
+                    <a href="/home">Dashboard</a>
                     <a href="/user">Runner</a>
                     <a href="/booking">Booking Services</a>
                     <a href="/rating">Rating Services</a>
@@ -110,5 +94,5 @@
                 </div>
             </div>
         </div>
-    </body>
-</html>
+@endsection
+
