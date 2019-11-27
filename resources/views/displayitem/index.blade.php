@@ -1,6 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
+<div class="container">
 <div class="row">
  <div class="col-md-12">
  <br/>
@@ -13,6 +14,7 @@
        <th>Item Pickup Place</th>
        <th>Delivery Date and Time</th>
        <th>Place To Deliver</th>
+       <th>Status</th>
     </tr>
 
     @foreach ($displayitem as $item)
@@ -22,10 +24,12 @@
       <td>{{$item->pickup}}</td>
       <td>{{$item->delivertime}}</td>
       <td>{{$item->deliverto}}</td>
+      <td>{{$item->itemstatus}}</td>
       
     </tr>
     @endforeach
 </table>
+</div>
 </div>
 
 @endsection

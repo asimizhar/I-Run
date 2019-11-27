@@ -75,10 +75,10 @@
                 <div class="top-right links">
                     @auth
                     @else
-                        <a href="{{ route('login') }}">Login</a>
+                        <!-- <a href="{{ route('login') }}">Login</a>
 
                         @if (Route::has('register'))
-                            <a href="{{ route('register') }}">Register</a>
+                            <a href="{{ route('register') }}">Register</a> -->
                         @endif
                     @endauth
                 </div>
@@ -86,10 +86,10 @@
 
             <div class="content">
                 <div class="link">
-                    <a href="/home">Dashboard</a>
-                    <a href="/user">Runner</a>
-                    <a href="/booking">Booking Services</a>
-                    <a href="/rating">Rating Services</a>
+                    <a href="/home"> <span class="fa fa-navicon" style="font-size:15px"> Dashboard</span></a>
+                    <a href="/user"><span class="fa fa-inbox" style="font-size:15px"> Order List</span></a>
+                    <a href="/booking"><span class="fa fa-cart-plus" style="font-size:15px"> Booking Services</span></a>
+                    <!-- <a href="/rating">Rating Services</a> -->
                     
                 </div>
             </div>

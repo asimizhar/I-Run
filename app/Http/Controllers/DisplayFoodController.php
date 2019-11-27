@@ -22,7 +22,7 @@ class DisplayFoodController extends Controller
     {
         $displayfood=\DB::table('foods')
            ->join('users', 'users.id', '=', 'foods.userid')
-           ->select('users.name','foods.foodname','foods.price','foods.deliverydatetime','foods.placedeliver','foods.placeorder')
+           ->select('foods.id','users.name','foods.foodname','foods.price','foods.deliverydatetime','foods.placedeliver','foods.placeorder','foods.status')
            ->get();
            return view('displayfood.index', compact('displayfood'));
         
@@ -69,6 +69,7 @@ class DisplayFoodController extends Controller
     public function edit(DisplayFood $displayFood)
     {
         //
+        
     }
 
     /**

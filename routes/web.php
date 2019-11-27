@@ -12,7 +12,7 @@
 */
 
 Route::get('/', function () {
-    return view('home');
+    return view('welcome');
 });
 Route::get('/user', function () {
     return view('user');
@@ -37,4 +37,3 @@ Route::resource('user/displayitem','DisplayItemController');
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');

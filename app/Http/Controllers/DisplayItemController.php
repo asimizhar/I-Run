@@ -22,7 +22,7 @@ class DisplayItemController extends Controller
     {
         $displayitem=\DB::table('items')
         ->join('users', 'users.id', '=', 'items.userid')
-        ->select('users.name','items.referenceno','items.pickup','items.delivertime','items.deliverto')
+        ->select('users.name','items.referenceno','items.pickup','items.delivertime','items.deliverto','items.itemstatus')
         ->get();
         return view('displayitem.index', compact('displayitem'));
     }

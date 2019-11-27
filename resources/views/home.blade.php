@@ -71,15 +71,57 @@
 
 @section('content')
 <div class=" flex-right full-height">
+            @if (Route::has('login'))
+                <div class="top-right links">
+                    @auth
+                    @else
+                        <!-- <a href="{{ route('login') }}">Login</a>
+
+                        @if (Route::has('register'))
+                            <a href="{{ route('register') }}">Register</a> -->
+                        @endif
+                    @endauth
+                </div>
+            @endif
 
             <div class="content">
                 <div class="link">
-                    <a href="/home">Dashboard</a>
-                    <a href="/user">Runner</a>
-                    <a href="/booking">Booking Services</a>
-                    <a href="/rating">Rating Services</a>
+                    <a href="/home"> <span class="fa fa-navicon" style="font-size:15px"> Dashboard</span></a>
+                    <a href="/user"><span class="fa fa-inbox" style="font-size:15px"> Order List</span></a>
+                    <a href="/booking"><span class="fa fa-cart-plus" style="font-size:15px"> Booking Services</span></a>
+                    <!-- <a href="/rating">Rating Services</a> -->
                     
                 </div>
             </div>
-        </div>
+        
+
+<div class="container">
+<div class="row">
+ <div class="col-md-12">
+ <br/>
+ <h3 allign="center">Order Status</h3>
+ <br/>
+ 
+ <table class="table table-bordered sortable">
+   <tr>
+       <th>Customer Name</th>
+       <th>Food Name</th>
+       <th>Delivery Date and Time</th>
+       <th>Status</th>
+    </tr>
+
+    @foreach ($displaystatus as $food)
+    <tr>
+      <td>{{$food->name}}</td>
+      <td>{{$food->foodname}}</td>
+      <td>{{$food->deliverydatetime}}</td>
+      <td>{{$food->status}}</td>
+      
+    </tr>
+    @endforeach
+</table>
+</div>
+</div>
 @endsection
+
+
