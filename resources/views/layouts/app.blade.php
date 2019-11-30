@@ -25,7 +25,7 @@
     <div id="app" >
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container-fluid" style="background-color:#00a65a;height:70px">
-                <a class="navbar-brand" href="{{ url('/') }}" style="color:#ffae42">
+                <a class="navbar-brand" href="{{ url('/home') }}" style="color:#ffae42">
                    I-RUN
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">

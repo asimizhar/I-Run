@@ -24,11 +24,18 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $displaystatus=\DB::table('foods')
-        ->join('users', 'foods.userid', '=', 'users.id')
-        ->select('foods.foodname','users.name','foods.deliverydatetime','foods.status')
+        $displaystatus=\DB::table('users')
+        ->join('foods', 'users.id', '=', 'foods.userid')
+        ->select('foods.id','users.name','foods.foodname','foods.deliverydatetime','foods.status')
         ->get();
-        return view('home', compact('displaystatus'));
+
+        $status=\DB::table('users')
+        ->join('items', 'users.id', '=', 'items.userid')
+        ->select('items.id','users.name','items.referenceno','items.delivertime','items.itemstatus')
+        ->get();
+        
+
+        return view('home', compact('displaystatus','status'));
     }
 
 }
