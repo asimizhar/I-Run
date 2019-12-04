@@ -57,7 +57,11 @@ class DisplayFoodController extends Controller
      */
     public function show(DisplayFood $displayFood)
     {
-        //
+        $status=\DB::table('foods')
+           ->join('users', 'users.id', '=', 'foods.userid')
+           ->select('foods.id','users.name','foods.foodname','foods.price','foods.deliverydatetime','foods.placedeliver','foods.placeorder','foods.status')
+           ->first();
+        return view('displayfood.show', compact('status'));
     }
 
     /**
@@ -68,7 +72,11 @@ class DisplayFoodController extends Controller
      */
     public function edit(DisplayFood $displayFood)
     {
-        //
+        $status=\DB::table('foods')
+        ->join('users', 'users.id', '=', 'foods.userid')
+        ->select('foods.id','users.name','foods.foodname','foods.price','foods.deliverydatetime','foods.placedeliver','foods.placeorder','foods.status')
+        ->first();
+        return view('displayfood.edit', compact('status'));
         
     }
 
@@ -81,7 +89,11 @@ class DisplayFoodController extends Controller
      */
     public function update(Request $request, DisplayFood $displayFood)
     {
-        //
+        $status=\DB::table('foods')
+        ->update(request(['status']));
+
+        return redirect('user/displayfood');
+
     }
 
     /**
@@ -92,6 +104,7 @@ class DisplayFoodController extends Controller
      */
     public function destroy(DisplayFood $displayFood)
     {
-        //
+        $status->delete();
+        return redirect('booking/foods');  
     }
 }
