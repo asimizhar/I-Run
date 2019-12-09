@@ -1,13 +1,13 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
+<div class="container" style="background-color:papayawhip" >
 <div class="row">
  <div class="col-md-12">
  <br/>
  <h3 allign="center">Item Order</h3>
  <br/>
- <table class="table table-bordered sortable">
+ <table class="table table-bordered sortable" >
    <tr>
        <th>Customer Name</th>
        <th>Reference no</th>

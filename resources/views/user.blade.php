@@ -4,7 +4,7 @@
 <style>
 
 .column {
-  background-color:snow;
+  background-color:moccasin;
   float: left;
   border: 1px 0px 0px 200px solid #ddd;
   border-radius: 300px  300px  300px 300px;
@@ -22,10 +22,10 @@
 
 </style>
 
-
+<title>I-Run</title>
 
 @section('content')
-<div class="container">
+<div class="container" style="background-color:papayawhip">
    <h2>Please Choose Your Order List:</h2>
 
  <div class="row">
@@ -37,7 +37,7 @@
    </div>
    <div class="column">
    <a href="user/displayitem" >
-   <img src="https://media.licdn.com/dms/image/C560BAQEY7xLuwcpLNA/company-logo_200_200/0?e=2159024400&v=beta&t=AZsm6ime9zlzQpQdvdhx8bGaajG0_3gjFoPsfP5UGW0" alt="Food Image" height="150" width="200">
+   <img src="images/Parcel-removebg-preview.png" alt="Food Image" height="150" width="200">
    </a>
    <p style="text-align:center;padding:0px 100px 0px 0px"><a href="booking/items" style="text-decoration:none;" > Order for items</a><p>
    </div>

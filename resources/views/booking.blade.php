@@ -6,7 +6,7 @@
 <style>
  
 .column {
-  background-color:snow;
+  background-color:moccasin;
   float: left;
   border: 1px 0px 0px 200px solid #ddd;
   border-radius: 300px  300px  300px 300px;
@@ -20,11 +20,12 @@
   display: table;
 }
 </style>
+<title>I-Run</title>
 
 
 @section('content')
 
-<div class="container">
+<div class="container" style="background-color:papayawhip">
    <h2>Please Choose Your Booking Type:</h2>
 
  <div class="row">
