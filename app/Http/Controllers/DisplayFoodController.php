@@ -58,8 +58,7 @@ class DisplayFoodController extends Controller
     public function show(DisplayFood $displayFood)
     {
         $status=\DB::table('foods')
-           ->join('users', 'users.id', '=', 'foods.userid')
-           ->select('foods.id','users.name','foods.foodname','foods.price','foods.deliverydatetime','foods.placedeliver','foods.placeorder','foods.status')
+           ->select('foods.id','foods.foodname','foods.price','foods.deliverydatetime','foods.placedeliver','foods.placeorder','foods.status')
            ->first();
         return view('displayfood.show', compact('status'));
     }
@@ -73,8 +72,7 @@ class DisplayFoodController extends Controller
     public function edit(DisplayFood $displayFood)
     {
         $status=\DB::table('foods')
-        ->join('users', 'users.id', '=', 'foods.userid')
-        ->select('foods.id','users.name','foods.foodname','foods.price','foods.deliverydatetime','foods.placedeliver','foods.placeorder','foods.status')
+        ->select('foods.id','foods.foodname','foods.price','foods.deliverydatetime','foods.placedeliver','foods.placeorder','foods.status')
         ->first();
         return view('displayfood.edit', compact('status'));
         

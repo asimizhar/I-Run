@@ -17,13 +17,18 @@
                             <label for="status" class="col-md-4 col-form-label text-md-right">Order Status</label>
                          
                             <div class="col-md-6">
-                                <input id="status" type="text" class="form-control @error('status') is-invalid @enderror" name="status" value="{{$status->status}}" autocomplete="status" autofocus>
-                         
+                            
+                                <select id="status" type="text" class="form-control @error('status') is-invalid @enderror" name="status"  autocomplete="status" autofocus>
+                                <option>{{$status->status}}</option>
+                                <option>Taken</option>
+                                <option>Delivered</option>
+                                </select>
                                 @error('status')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
                                 @enderror
+                                
                             </div>
                         </div>
 

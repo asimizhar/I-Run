@@ -8,7 +8,7 @@
             <div class="card">
                 <div class="card-header">Update Food Name</div>
                 <div class="card-body">
-                    <form method="POST" action="{{ route('displayfood.destroy', $displayfood->status) }}">
+                    <form method="POST" action="{{ route('food.destroy', $food->id) }}">
                         @method('PATCH')
                         @csrf
 
@@ -16,7 +16,7 @@
                             <label for="foodname" class="col-md-4 col-form-label text-md-right">Food Name</label>
                          
                             <div class="col-md-6">
-                                <input id="foodname" type="text" class="form-control @error('foodname') is-invalid @enderror" name="foodname" value="{{$displayfood->type}}" autocomplete="foodname" autofocus>
+                                <input id="foodname" type="text" class="form-control @error('foodname') is-invalid @enderror" name="foodname" value="{{$food->type}}" autocomplete="foodname" autofocus>
                          
                                 @error('foodname')
                                     <span class="invalid-feedback" role="alert">
@@ -31,7 +31,7 @@
                                 <button type="submit" class="btn btn-primary">
                                     {{ __('Update') }}
                                 </button>
-                                <a href="{{ route('displayfood.index') }}" class="btn btn-danger">Cancel</a>
+                                <a href="{{ route('food.index') }}" class="btn btn-danger">Cancel</a>
                             </div>
                         </div>
                     </form>

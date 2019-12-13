@@ -17,6 +17,7 @@
        <th>Delivery Date and Time</th>
        <th>Place To Deliver</th>
        <th>Status</th>
+       <th>Action</th>
     </tr>
 
     @foreach ($displayfood as $food)
@@ -28,8 +29,8 @@
       <td>{{$food->placeorder}}</td>
       <td>{{$food->deliverydatetime}}</td>
       <td>{{$food->placedeliver}}</td>
-      <td><a href="{{action('DisplayFoodController@edit',$food->status)}}">{{$food->status}}</td>
-      
+      <td>{{$food->status}}</td>
+      <td><a href="{{action('DisplayFoodController@edit',$food->id)}}" class="btn btn-primary">Edit</a></td>
     </tr>
     @endforeach
 </table>

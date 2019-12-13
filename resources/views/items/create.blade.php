@@ -29,7 +29,13 @@
                             <label for="pickup" class="col-md-4 col-form-label text-md-right">Pick-Up Item From</label>
                          
                             <div class="col-md-6">
-                                <input id="pickup" type="text" class="form-control @error('pickup') is-invalid @enderror" name="pickup" value="{{ old('pickup') }}" autocomplete="pickup" autofocus>
+                                <input list="pickup" type="text" class="form-control @error('pickup') is-invalid @enderror" name="pickup" value="{{ old('pickup') }}" autocomplete="pickup" autofocus>
+                                <datalist id="pickup">
+                                <option>Unistorage</option>
+                                <option>Ezibox</option>
+                                <option>Post Office Sri Gombak</option>
+                                <option>Post Office Taman Melawati</option>
+                                </datalist>
                          
                                 @error('pickup')
                                     <span class="invalid-feedback" role="alert">
@@ -57,7 +63,15 @@
                             <label for="deliverto" class="col-md-4 col-form-label text-md-right">Deliver Place</label>
                          
                             <div class="col-md-6">
-                                <input id="deliverto" type="text" class="form-control @error('deliverto') is-invalid @enderror" name="deliverto" value="{{ old('deliverto') }}" autocomplete="deliverto" autofocus>
+                                <input list="deliverto" type="text" class="form-control @error('deliverto') is-invalid @enderror" name="deliverto" value="{{ old('deliverto') }}" autocomplete="deliverto" autofocus>
+                                <datalist id="deliverto">
+                                <option value="Mahallah Ali">
+                                <option value="Mahallah Zubair">
+                                <option value="Mahallah Bilal">
+                                <option value="Mahallah Siddiq">
+                                <option value="Mahallah Uthman">
+                                <option value="Mahallah Farouq">
+                                </datalist>
                          
                                 @error('deliverto')
                                     <span class="invalid-feedback" role="alert">

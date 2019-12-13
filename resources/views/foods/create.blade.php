@@ -43,7 +43,15 @@
                             <label for="placeorder" class="col-md-4 col-form-label text-md-right">Restaurant/Cafe Name</label>
                          
                             <div class="col-md-6">
-                                <input id="placeorder" type="text" class="form-control @error('price') is-invalid @enderror" name="placeorder" value="{{ old('placeorder') }}" autocomplete="placeorder" autofocus>
+                                <input list="placeorder" type="text" class="form-control @error('price') is-invalid @enderror" name="placeorder" value="{{ old('placeorder') }}" autocomplete="placeorder" autofocus>
+                                <datalist id="placeorder">
+                                <option>Cafe Ali</option>
+                                <option>Cafe Zubair</option>
+                                <option>Cafe Bilal</option>
+                                <option>Cafe Siddiq</option>
+                                <option>Cafe Uthman</option>
+                                <option>Cafe Farouq</option>
+                                </datalist>
                          
                                 @error('placeorder')
                                     <span class="invalid-feedback" role="alert">
@@ -71,7 +79,15 @@
                             <label for="placedeliver" class="col-md-4 col-form-label text-md-right">Place To Receive Order</label>
                          
                             <div class="col-md-6">
-                                <input id="placedeliver" type="text" class="form-control @error('price') is-invalid @enderror" name="placedeliver" value="{{ old('placedeliver') }}" autocomplete="placedeliver" autofocus>
+                                <input list="placedeliver" type="text" class="form-control @error('price') is-invalid @enderror" name="placedeliver"  autocomplete="placedeliver" autofocus>
+                                <datalist id="placedeliver">
+                                <option value="Mahallah Ali">
+                                <option value="Mahallah Zubair">
+                                <option value="Mahallah Bilal">
+                                <option value="Mahallah Siddiq">
+                                <option value="Mahallah Uthman">
+                                <option value="Mahallah Farouq">
+                                </datalist>
                          
                                 @error('placedeliver')
                                     <span class="invalid-feedback" role="alert">

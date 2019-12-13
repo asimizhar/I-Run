@@ -33,7 +33,8 @@ class FoodsController extends Controller
      */
     public function create()
     {
-        return view('foods.create');
+        $foods = Food::all(['id', 'placedeliver']);
+        return view('foods.create',compact('foods',$foods));
     }
 
     /**
