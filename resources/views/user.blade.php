@@ -31,7 +31,7 @@
  <div class="row">
    <div class="column">
    <a href="user/displayfood" >
-   <img src="https://1cca81f991f801ed1f8a-67910a7dd0ce9c21dc476d2bc67bf6ca.ssl.cf2.rackcdn.com/img/homepage/icons/fbpickup.png" alt="Food Image" height="150" width="200">
+   <img src="images/fbpickup.png" alt="Food Image" height="150" width="200">
    </a>
    <p style="text-align:center;padding:0px 100px 0px 0px"><a href="booking/foods" style="text-decoration:none;" > Order for foods</a></p>
    </div>

@@ -22,7 +22,7 @@ class DisplayItemController extends Controller
     {
         $displayitem=\DB::table('items')
         ->join('users', 'users.id', '=', 'items.userid')
-        ->select('users.name','items.referenceno','items.pickup','items.delivertime','items.deliverto','items.itemstatus')
+        ->select('items.id','users.name','items.referenceno','items.pickup','items.delivertime','items.deliverto','items.itemstatus')
         ->get();
         return view('displayitem.index', compact('displayitem'));
     }
@@ -67,7 +67,10 @@ class DisplayItemController extends Controller
      */
     public function edit(DisplayItem $displayItem)
     {
-        //
+        $status=\DB::table('items')
+        ->select('items.id','items.itemstatus')
+        ->first();
+        return view('displayitem.edit', compact('status'));
     }
 
     /**
@@ -79,7 +82,11 @@ class DisplayItemController extends Controller
      */
     public function update(Request $request, DisplayItem $displayItem)
     {
-        //
+        $status=\DB::table('items')
+        ->limit(1)
+        ->update(request(['itemstatus']));
+
+        return redirect('user/displayitem');
     }
 
     /**

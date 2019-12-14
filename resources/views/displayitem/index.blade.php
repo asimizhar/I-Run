@@ -15,6 +15,7 @@
        <th>Delivery Date and Time</th>
        <th>Place To Deliver</th>
        <th>Status</th>
+       <th>Action</th>
     </tr>
 
     @foreach ($displayitem as $item)
@@ -25,6 +26,7 @@
       <td>{{$item->delivertime}}</td>
       <td>{{$item->deliverto}}</td>
       <td>{{$item->itemstatus}}</td>
+      <td><a href="{{action('DisplayItemController@edit',$item->id)}}" class="btn btn-primary">Edit</a></td>
       
     </tr>
     @endforeach
