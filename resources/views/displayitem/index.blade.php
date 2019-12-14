@@ -8,7 +8,7 @@
  <h3 allign="center">Item Order</h3>
  <br/>
  <table class="table table-bordered sortable" >
-   <tr>
+   <tr style="background-color:lightgoldenrodyellow">
        <th>Customer Name</th>
        <th>Reference no</th>
        <th>Item Pickup Place</th>
@@ -18,7 +18,7 @@
     </tr>
 
     @foreach ($displayitem as $item)
-    <tr>
+    <tr style="background-color:lightyellow">
       <td>{{$item->name}}</td>
       <td>{{$item->referenceno}}</td>
       <td>{{$item->pickup}}</td>

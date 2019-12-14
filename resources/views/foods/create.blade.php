@@ -11,10 +11,10 @@
                     <form method="POST" action="{{ route('foods.store') }}">
                         @csrf
 
-                        <div class="form-group row">
+                        <div class="form-group row" >
                             <label for="type" class="col-md-4 col-form-label text-md-right">Food Name</label>
                          
-                            <div class="col-md-6">
+                            <div class="col-md-6" >
                                 <input id="foodname" type="text" class="form-control @error('type') is-invalid @enderror" name="foodname" value="{{ old('foodname') }}" autocomplete="foodname" autofocus>
                          
                                 @error('foodname')
