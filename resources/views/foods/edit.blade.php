@@ -2,13 +2,13 @@
 
 @section('content')
 
-<div class="container">
+<div class="container"  style="background-color:papayawhip">
     <div class="row justify-content-center">
-        <div class="col-md-8">
+        <div class="col-md-8"  style="padding:10px">
             <div class="card">
-                <div class="card-header">Update Food Name</div>
-                <div class="card-body">
-                    <form method="POST" action="{{ route('food.destroy', $food->id) }}">
+                <div class="card-header" style="background-color:lightgoldenrodyellow">Update Food Name</div>
+                <div class="card-body" style="background-color:lightyellow">
+                    <form method="POST" action="{{ route('foods.destroy', $food->id) }}">
                         @method('PATCH')
                         @csrf
 
@@ -31,7 +31,7 @@
                                 <button type="submit" class="btn btn-primary">
                                     {{ __('Update') }}
                                 </button>
-                                <a href="{{ route('food.index') }}" class="btn btn-danger">Cancel</a>
+                                <a href="{{ route('foods.index') }}" class="btn btn-danger">Cancel</a>
                             </div>
                         </div>
                     </form>

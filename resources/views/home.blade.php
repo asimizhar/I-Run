@@ -12,7 +12,7 @@
  <br/>
  
  <table class="table table-bordered sortable">
-   <tr>
+   <tr style="background-color:lightgoldenrodyellow">
        <th>Food ID</th>
        <th>Customer Name</th>
        <th>Food Name</th>
@@ -21,7 +21,7 @@
     </tr>
 
     @foreach ($displaystatus as $food)
-    <tr>
+    <tr style="background-color:lightyellow">
 
       <td>{{$food->id}}</td>
       <td>{{$food->name}}</td>
@@ -34,7 +34,7 @@
     </tr>
 </table>
 <table class="table table-bordered sortable">
-<tr>
+<tr style="background-color:lightgoldenrodyellow">
        <th>Item ID</th>
        <th>Customer Name</th>
        <th>Reference No</th>
@@ -42,7 +42,7 @@
        <th>Status</th>
     </tr>
     @foreach ($status as $item)
-    <tr>
+    <tr style="background-color:lightyellow">
       <td>{{$item->id}}</td>
       <td>{{$item->name}}</td>
       <td>{{$item->referenceno}}</td>

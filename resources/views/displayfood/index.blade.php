@@ -7,8 +7,8 @@
  <br/>
  <h3 allign="center">Food Order</h3>
  <br/>
- <table class="table table-bordered sortable">
-   <tr>
+ <table class="table table-bordered sortable" >
+   <tr style="background-color:lightgoldenrodyellow">
        <th>Food ID</th>
        <th>Customer Name</th>
        <th>Food Name</th>
@@ -21,7 +21,7 @@
     </tr>
 
     @foreach ($displayfood as $food)
-    <tr>
+    <tr style="background-color:lightyellow">
       <td>{{$food->id}}</td>
       <td>{{$food->name}}</td>
       <td>{{$food->foodname}}</td>

@@ -5,8 +5,8 @@
     <div class="row justify-content-center">
         <div class="col-md-8" style="padding:10px">
             <div class="card" >
-                <div class="card-header">Parcel Tracking Number</div>
-                <div class="card-body">
+                <div class="card-header" style="background-color:lightgoldenrodyellow">Parcel Tracking Number</div>
+                <div class="card-body" style="background-color:lightyellow">
                     <ul>
                         @foreach ($items as $item)
                             <li>
