@@ -1,5 +1,6 @@
 @extends('layouts.app')
 
+<title>I-Run</title>
 @section('content')
 
 <div class="container" style="background-color:papayawhip">
@@ -12,10 +13,10 @@
                         @csrf
 
                         <div class="form-group row" >
-                            <label for="type" class="col-md-4 col-form-label text-md-right">Food Name</label>
+                            <label for="foodname" class="col-md-4 col-form-label text-md-right">Food Name</label>
                          
                             <div class="col-md-6" >
-                                <input id="foodname" type="text" class="form-control @error('type') is-invalid @enderror" name="foodname" value="{{ old('foodname') }}" autocomplete="foodname" autofocus>
+                                <input id="foodname" type="text" class="form-control @error('foodname') is-invalid @enderror" name="foodname" value="{{ old('foodname') }}" autocomplete="foodname" autofocus>
                          
                                 @error('foodname')
                                     <span class="invalid-feedback" role="alert">
@@ -29,7 +30,7 @@
                             <label for="price" class="col-md-4 col-form-label text-md-right">Price</label>
                          
                             <div class="col-md-6">
-                                <input id="price" type="text" class="form-control @error('price') is-invalid @enderror" name="price" value="RM" autocomplete="price" autofocus>
+                                <input id="price" type="text" class="form-control @error('price') is-invalid @enderror" name="price" value="{{ old('price') }}" autocomplete="price" autofocus>
                          
                                 @error('price')
                                     <span class="invalid-feedback" role="alert">

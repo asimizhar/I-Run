@@ -1,5 +1,5 @@
 @extends('layouts.app')
-
+<title>I-Run</title>
 @section('content')
 
 <div class="container" style="background-color:papayawhip">
